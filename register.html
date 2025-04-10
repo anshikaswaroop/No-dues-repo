@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBU No-Dues Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* body {
+            background: url('1.webp') center/cover;
+            color: white;
+            text-align: center;
+        } */
+        body {
+    background: url('1.webp') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(115, 138, 237, 0.6); /* Adjust opacity for lighter or darker shading */
+    z-index: -500;
+}
+        .navbar {
+            background-color: #657de8;
+        }
+        .navbar .nav-link {
+    color: white !important;  /* Change this to any color you want */
+    /* font-weight: bold; */
+    transition: color 0.3s ease;
+    }
+
+       .navbar .nav-link:hover {
+        color: black !important;  /* Change this to any hover color */
+        }
+
+
+
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            text-align: center;
+            padding: 100px;
+        }
+        .register-btn {
+            border: 2px solid white;
+            padding: 10px 20px;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .register-btn:hover {
+            background: #657de8;
+            color: white;
+        }
+        .login-btn {
+            background: rgb(209, 0, 0);
+            padding: 10px 20px;
+            border-radius: 5px;
+            color:#657de8 !important;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+ 
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="GBU logo.png" alt="GBU Logo" width="60"> GAUTAM BUDDHA UNIVERSITY
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Admin</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                <div>
+                <li class="nav-item"><a class="nav-link login-btn" href="#">Student Login</a></li>
+               </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div>
+    <h2>No Dues Form for Academic Year 2025-2026.</h2>
+    <p>Students Kindly fill the details <br><small>*Read the Instructions carefully before your Application</small></p>
+</div>
+    <a href="#" class="register-btn">Register Now</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

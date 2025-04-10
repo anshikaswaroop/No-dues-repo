@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student No-Dues Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('1.jpg');
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0c0c30;
+            color: white;
+            padding: 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        /* h2, h3, h4 {
+            text-align: left;
+        } */
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SCHOOL OF ICT</div>
+        <nav>
+            <button class="btn">Student Login</button>
+            <button class="btn">Home</button>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="section">
+        <div>
+        <h2>SCHOOL OF INFORMATION AND COMMUNICATION TECHNOLOGY</h2>
+        <h3>GAUTAM BUDDHA UNIVERSITY, GREATER NOIDA</h3>
+        <h4>NODUES FORM FOR ACADEMIC SESSION 2025-26</h4>
+    </div>
+    </div>
+        <div class="section">
+            <h3>Student Information</h3>
+            <label>Roll Number:</label>
+            <input type="text" placeholder="123/ABC/123">
+            <label>Student's Full Name:</label>
+            <input type="text" placeholder="Enter Full Name">
+            <label>Father's Name:</label>
+            <input type="text" placeholder="Enter Father's Name">
+            <label>Name of Programme:</label>
+            <select><option>Select Programme</option></select>
+            <label>Branch / Specialization:</label>
+            <select><option>Select Branch / Specialization</option></select>
+            <label>Year:</label>
+            <select><option>Select Year</option></select>
+            <label>Semester:</label>
+            <select><option>Select Semester</option></select>
+            <label>Gender:</label>
+            <select><option>Select Gender</option></select>
+            <label>Aadhar Card Number:</label>
+            <input type="text" placeholder="Enter Aadhar Card Number">
+            <label>Student Contact Number:</label>
+            <input type="text" placeholder="Enter Contact Number">
+            <label>Student Email:</label>
+            <input type="text" placeholder="xyz@gmail.com">
+        </div>
+        
+        <div>
+            <h3>Fee & Dues Details</h3>
+        <div class="section">
+            <h3>Odd Semester Academic Fee</h3>
+            <label></label>
+            <input type="text" placeholder="Amount">
+            <label></label>
+            <input type="text" placeholder="Remaining">
+            <label></label>
+            <input type="text" placeholder="Mode">
+            <label></label>
+            <input type="text" placeholder=" GBU Receipt no.">
+            <label>Fee Submission Date:</label>
+            <input type="text" placeholder="DD/MM/YY">
+        </div>
+        <div class="section">
+            <h3>Even Semester Academic Fee</h3>
+            <label></label>
+            <input type="text" placeholder="Amount">
+            <label></label>
+            <input type="text" placeholder="Remaining">
+            <label></label>
+            <input type="text" placeholder="Mode">
+            <label></label>
+            <input type="text" placeholder=" GBU Receipt no.">
+            <label>Fee Submission Date:</label>
+            <input type="text" placeholder="DD/MM/YY">
+        </div>
+        <div class="section">
+            <h3>Hostel Fee</h3>
+            <label></label>
+            <input type="text" placeholder="Amount">
+            <label></label>
+            <input type="text" placeholder="Remaining">
+            <label></label>
+            <input type="text" placeholder="Mode">
+            <label></label>
+            <input type="text" placeholder=" GBU Receipt no.">
+            <label>Fee Submission Date:</label>
+            <input type="text" placeholder="DD/MM/YY">
+        </div>
+        <div class="section">
+            <h3>Mess Fee</h3>
+            <label></label>
+            <input type="text" placeholder="Amount">
+            <label></label>
+            <input type="text" placeholder="Remaining">
+            <label></label>
+            <input type="text" placeholder="Mode">
+            <label></label>
+            <input type="text" placeholder=" GBU Receipt no.">
+            <label>Fee Submission Date:</label>
+            <input type="text" placeholder="DD/MM/YY">
+        </div>
+        
+        <button class="submit-btn">Submit</button>
+    </div>
+</div>
+</body>
+</html>
