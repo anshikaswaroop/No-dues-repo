@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="index.css">
+    <meta name="google-signin-client_id" content="235680153173-of2o07rlo6bklnco3avmhlm7ljiv8d8u.apps.googleusercontent.com">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
     <div class="login-container">
@@ -24,11 +27,62 @@
                 <input type="password" placeholder="Password">
             </div>
 
-            <button class="login-btn">Login</button>
-            <p class="forgot-password">Forgot Password? <a href="#">Click here to reset</a></p>
+            <!-- Login Button -->
+<button class="login-btn">Login</button>
 
-            <button class="register-btn">Register New Account</button>
+<p class="forgot-password">Forgot Password? <a href="#">Click here to reset</a></p>
+
+<!-- ✅ Google Sign-In Button (moved above register) -->
+<div id="g_id_signin" style="margin: 15px 0;"></div>
+
+<!-- ✅ Show Email after login (optional) -->
+<p id="user-info" style="margin-bottom: 15px; color: green;"></p>
+
+<!-- Register Button -->
+<button class="register-btn"><a href="form.html">Register New Account</a></button>
+
         </div>
     </div>
+
+    <script>
+        function parseJwt(token) {
+            const base64Url = token.split('.')[1];
+            const base64 = decodeURIComponent(atob(base64Url).split('').map(function(c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+            return JSON.parse(base64);
+        }
+
+        function handleCredentialResponse(response) {
+            const userData = parseJwt(response.credential);
+            console.log("User email:", userData.email);
+            document.getElementById("user-info").innerText = `Signed in as: ${userData.email}`;
+
+            // Send to backend (update the URL if needed)
+            fetch("http://localhost:5000/save-user", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ email: userData.email })
+            })
+            .then(res => res.json())
+            .then(data => console.log("User saved:", data))
+            .catch(err => console.error("Error saving user:", err));
+        }
+
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: "235680153173-of2o07rlo6bklnco3avmhlm7ljiv8d8u.apps.googleusercontent.com",
+                callback: handleCredentialResponse
+            });
+            google.accounts.id.renderButton(
+                document.getElementById("g_id_signin"),
+                { theme: "outline", size: "large" }
+            );
+            google.accounts.id.prompt(); // Optional: one-tap popup
+        };
+    </script>
 </body>
 </html>
+
